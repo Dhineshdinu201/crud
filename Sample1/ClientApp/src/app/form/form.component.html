@@ -1,0 +1,12 @@
+<input type="file" ng2FileSelect [uploader]="uploader" />
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <input type="text" name="title" placeholder="title" formControlName="title">
+  <br />
+
+  <input type="text" name="description" placeholder="Description" formControlName="description">
+  <br />
+
+  <textarea name="message" placeholder="Overview" formControlName="overview"></textarea>
+  <br />
+  <input type="submit" value="Send">
+</form>

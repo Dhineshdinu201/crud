@@ -1,0 +1,26 @@
+<button (click)="create()">Create</button>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>OverView</th>
+    <th>Created By</th>
+    <th>Created Date</th>
+    <th>Status</th>
+    <th>ImageUpload</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let article of articleList">
+    <td>{{article.id}}</td>
+    <td>{{article.title}}</td>
+    <td>{{article.description}}</td>
+    <td>{{article.overview}}</td>
+    <td>{{article.createdBy}}</td>
+    <td>{{article.createdDate}}</td>
+    <td>{{article.status}}</td>
+    <td><img [src]="article.uploadURL" style="width:50px;height:50px;"/></td>
+    <td><button (click)="edit(article.id)">Edit</button>  |   <button (click)="delete(article.id)">Delete</button></td>
+
+  </tr>
+</table>
